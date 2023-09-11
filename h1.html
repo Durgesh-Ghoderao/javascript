@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Form1
+        </title>
+
+    </head>
+    <body>
+        <form name="f1">
+            <h1>Area of Circle</h1>  
+            <h1>
+                Enter Radius:<input type="text" id="t1" >
+                <br>
+                 <input type="button" value=" Calculate" onclick="AOC()">
+                <br>
+                Area of Circle is:<input type="text" id="t2" >
+
+            </h1>
+
+
+        </form>
+        <script>
+            function AOC()
+            {
+                var a = document.getElementById("t1").value; 
+                var b = 3.14159265 * a * a  ;
+                document.getElementById("t2").value = b;
+            }
+        </script>
+    </body>
+</html>
