@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Cookies demo
+        </title>
+    </head>
+    <body>
+        <h1>
+            Enter username: <input type="text" id="t1">
+            <br>
+            Enter password: <input type="password" id="p1">
+            <br>
+            Enter Location: <input type="text" id="t2">
+            <br>
+            <input type="button" value="create Cookies" id="b1" onclick="cookie1()">
+        </h1>
+        <script type="text/javascript">
+            console.log(document.cookie);
+            function cookie1(){
+            var a = document.getElementById("t1").value;
+            var pass = document.getElementById("p1").value;
+            var loc = document.getElementById("t2").value;
+            document.cookie = "Username=" + a + "; expires= thu, 28 sep 2023 12:00:00" ;
+            document.cookie = "Password=" + pass;
+            document.cookie = "Location=" + loc;
+
+            alert("Username is " + (document.cookie).split(";")[0].split("=")[1]);
+            alert("Password is " + (document.cookie).split(";")[1].split("=")[1]);
+            alert("Location is " + (document.cookie).split(";")[2].split("=")[1]);
+            // useranme = abc ; password = abc ; Location = abc 
+        
+        }
+
+        </script>
+    </body>
+</html>
